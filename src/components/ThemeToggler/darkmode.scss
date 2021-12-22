@@ -50,6 +50,9 @@ body {
 
 .dark-mode {
   padding-left: 5px;
+  @include mobile {
+    padding-top: 1.5px;
+  }
   label {
     position: relative;
     display: block;

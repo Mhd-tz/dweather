@@ -125,6 +125,9 @@ a {
       padding-left: 0;
       margin-bottom: 0;
       list-style: none;
+      @include mobile {
+        margin-top: 0px;
+      }
 
       > li {
         > a,
@@ -144,6 +147,7 @@ a {
           }
           @include mobile {
             font-size: 0.95rem;
+            margin-top: 2px;
             padding: $navbar-link-padding-y 0.5rem;
           }
         }

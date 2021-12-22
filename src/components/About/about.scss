@@ -50,12 +50,16 @@ $font-size-base: 1rem;
     align-items: center;
     justify-content: center;
     padding: 50px;
+    @include mobile {
+      padding: 30px;
+    }
     p {
-      font-size: 1rem;
+      font-size: 1.1rem;
       font-weight: normal;
       color: var(--about-text-color);
-      margin-bottom: 0.2rem;
-      margin-bottom: 10px;
+      // make some space between the text
+      // margin-bottom: 0.2rem;
+      margin-bottom: 15px;
     }
     h1 {
       font-size: 2rem;
@@ -64,9 +68,6 @@ $font-size-base: 1rem;
       //move the text up
       margin-top: -1rem;
       padding: 20px;
-      @include mobile {
-        padding: 20px;
-      }
     }
     h2 {
       font-size: 1.5rem;
@@ -96,8 +97,8 @@ $font-size-base: 1rem;
     @include mobile {
       width: 50px;
       height: 50px;
-      top: 80%;
-      right: 45%;
+      top: 83%;
+      right: 43%;
     }
   }
   .about-developer {

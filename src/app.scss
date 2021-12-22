@@ -39,6 +39,7 @@
         font-size: 1.7rem;
         border-top-left-radius: 0px;
         border-top-right-radius: 0px;
+        margin-top: 20px;
       }
       width: calc(100% - 30px);
       @include mobile {
@@ -53,12 +54,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    position: fixed;
+    @include mobile {
+      position: relative;
+    }
     bottom: 0;
     //center the weather
     left: 50%;
     transform: translateX(-50%);
-    // width: 50%;
+    width: 50%;
     height: 35%;
     background-color: var(--search-background-color);
     @include mobile {
@@ -114,6 +118,10 @@
       transition: all 0.3s ease-in-out;
       &:hover {
         transform: scale(1.1);
+        @include mobile {
+          transform: scale(1.01);
+          background-color: green;
+        }
         // width: 450px;
       }
       .container {
