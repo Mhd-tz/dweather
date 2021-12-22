@@ -1,7 +1,7 @@
 @import "global/global.scss";
 
 .App {
-  position: relative;
+  // position: relative;
   .top-weather {
     //put it in the center
     display: flex;
@@ -53,7 +53,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
+    position: relative;
     bottom: 0;
     //center the weather
     left: 50%;
