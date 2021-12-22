@@ -26,7 +26,7 @@ a {
 }
 
 .container {
-  width: 1170px;
+  width: 100%;
   position: relative;
   margin: {
     left: auto;
@@ -35,6 +35,12 @@ a {
   padding: {
     left: 15px;
     right: 15px;
+  }
+  @include mobile {
+    padding: {
+      left: 0;
+      right: 0;
+    }
   }
 }
 
@@ -86,6 +92,9 @@ a {
       font-weight: 500;
       color: var(--navbar-text-color);
       h4 {
+        // @include mobile {
+        //   font-size: 1.1rem;
+        // }
         span {
           color: var(--navbar-base-color);
         }
@@ -117,10 +126,6 @@ a {
       margin-bottom: 0;
       list-style: none;
 
-      @include mobile {
-        display: flex;
-      }
-
       > li {
         > a,
         text,
@@ -137,6 +142,10 @@ a {
           &:hover {
             color: var(--navbar-hover-color);
           }
+          @include mobile {
+            font-size: 0.95rem;
+            padding: $navbar-link-padding-y 0.5rem;
+          }
         }
         &.active {
           a,
@@ -151,6 +160,9 @@ a {
   .github-icon {
     margin-left: 20px;
     color: var(--navbar-text-color);
+    @include mobile {
+      margin-left: 15px;
+    }
     :hover {
       color: $github-color;
     }

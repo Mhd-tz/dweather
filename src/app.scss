@@ -8,6 +8,7 @@
     width: 65%;
     @include mobile {
       width: 100%;
+      padding: 0;
     }
     //make height half of the screen
     height: 50vh;
@@ -33,9 +34,14 @@
       background-color: #e2e8f0;
       border-top-left-radius: 20px;
       border-top-right-radius: 20px;
+      @include mobile {
+        font-size: 1.7rem;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+      }
       width: calc(100% - 30px);
       @include mobile {
-        width: calc(100% - 25px);
+        width: 100%;
       }
       align-items: center;
       text-align: center;
@@ -60,7 +66,11 @@
       width: 100%;
       align-items: center;
       justify-content: center;
-      padding: 10px;
+      background-color: transparent;
+      display: flex;
+      left: 0;
+      transform: translateX(0);
+      height: 300px;
       // margin-top: 50px;
     }
     .bottom-weather {
@@ -68,6 +78,13 @@
       justify-content: center;
       align-items: center;
       background-color: #273047;
+      @include mobile {
+        // flex-direction: column;
+        // width: 100%;
+        // align-items: center;
+        // justify-content: center;
+        // margin-top: 50px;
+      }
       //make a border
       border: 2px solid rgb(173, 173, 173);
       //shadow
@@ -80,11 +97,13 @@
       color: white;
       text-align: center;
       @include mobile {
-        width: 90%;
-        height: 25%;
+        width: 100%;
+        // height: 25%;
+        height: 65px;
         margin-left: 0;
         margin-right: 0;
         margin-top: 5px;
+        padding: 0;
       }
       &:first-child {
         margin-right: 0;
@@ -109,8 +128,8 @@
           height: 100%;
           flex-direction: row;
           align-items: center;
-          justify-content: space-between;
-          padding: 30px;
+          justify-content: space-around;
+          padding: 15px;
         }
       }
     }

@@ -8,10 +8,10 @@ function Navbar({ aboutOpen, setAboutOpen, isActive, setActive }) {
 
   return (
     // <Nav className="navbar">
-    <nav className={"navbar"}>
+    <nav className="navbar">
       <div className="container">
         <div className="navbar-header">
-          <strong href="#">
+          <strong>
             <h4>
               D<span>Weather</span>
             </h4>
