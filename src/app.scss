@@ -1,6 +1,7 @@
 @import "global/global.scss";
 
 .App {
+  position: relative;
   .top-weather {
     //put it in the center
     display: flex;
