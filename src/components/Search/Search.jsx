@@ -21,7 +21,7 @@ function Search({ onCityFound, far, setFar }) {
 
   // get weather data from API by city name from accuweather
   const getWeather = async (e, city) => {
-    const url = `http://dataservice.accuweather.com/locations/v1/cities/search?apikey=${apiKey}&q=${city}`;
+    const url = `https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${apiKey}&q=${city}`;
     fetch(url)
       .then((res) => res.json())
       .then((res) => res.find((r) => r.Country.ID))
@@ -40,7 +40,7 @@ function Search({ onCityFound, far, setFar }) {
   };
 
   const getLocation = async (e, zip) => {
-    const URL = `http://dataservice.accuweather.com/locations/v1/postalcodes/search?apikey=${apiKey}&q=${zip}"`;
+    const URL = `https://dataservice.accuweather.com/locations/v1/postalcodes/search?apikey=${apiKey}&q=${zip}"`;
 
     fetch(URL)
       .then((res) => res.json())
