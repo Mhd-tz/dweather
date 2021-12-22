@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+@import "../../global/global.scss";
+
+.search-container {
+  font-family: "Roboto", sans-serif;
+  border-bottom: 1px solid var(--background-color);
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: var(--search-background-color);
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  @include mobile {
+    width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+
+  @media (max-width: 320px) {
+    width: 100%;
+  }
+  .search-bar {
+    width: 100%;
+    position: relative;
+    input {
+      border: none;
+      outline: none;
+      background-color: var(--search-background-color);
+      border-bottom: 1px solid var(--search-border-color);
+      padding: 10px;
+      width: 100%;
+      position: relative;
+      font-size: 1em;
+      &:focus {
+        border-bottom: 1px solid var(--search-focus-color);
+        color: var(--search-focus-color);
+      }
+      &::placeholder {
+        color: var(--search-placeholder-color);
+      }
+    }
+    button {
+      &.search-button {
+        position: absolute;
+        right: 10px;
+        background-color: var(--search-background-color);
+        border: none;
+        border-radius: 5px;
+        padding: 5px;
+        font-size: 1.2rem;
+        i {
+          &.fa-search {
+            font-size: 1.2rem;
+            color: var(--search-items-color);
+            padding-right: 5px;
+            &:hover {
+              cursor: pointer;
+              color: var(--search-items-hover-color);
+            }
+          }
+          &.fa-thermometer-half {
+            font-size: 1.2rem;
+            color: var(--search-items-color);
+            margin-left: 5px;
+            border-left: 1px solid var(--search-items-color);
+            padding-left: 10px;
+            span {
+              font-family: "Roboto", sans-serif;
+            }
+            &:hover {
+              cursor: pointer;
+              color: var(--navbar-base-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}

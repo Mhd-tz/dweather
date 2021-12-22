@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+@import "../../global/global.scss";
+$font-family: "Roboto", sans-serif;
+$font-size-base: 1rem;
+$base-color: rgb(80, 80, 255);
+$text-dark: #3c4250;
+$border-color: #eceef3;
+$navbar-body-color: #fff;
+$navbar-hover-color: #bbbbbb;
+
+.wrapper-top-weather {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 0px 15px 15px 15px;
+  width: 100%;
+  height: 100%;
+  font-family: $font-family;
+  .weather-left {
+    display: flex;
+    flex-direction: column;
+    background-color: $base-color;
+    border-bottom-left-radius: 20px;
+    opacity: 0.8;
+    align-items: center;
+    justify-content: space-around;
+    flex: 0.3;
+    @include mobile {
+      flex: 0.4;
+      opacity: 1;
+      justify-content: space-evenly;
+    }
+    width: 100%;
+    height: 100%;
+    color: white;
+    // text-shadow: 2px 2px 2px black;
+    &:hover {
+      opacity: 1;
+    }
+    .day-top {
+      font-size: 25px;
+      text-transform: uppercase;
+      font-weight: 500;
+      @include mobile {
+        font-size: 18px;
+      }
+    }
+    .time-top {
+      font-size: 15px;
+      font-weight: 300;
+      @include mobile {
+      }
+    }
+    .tempAvg {
+      margin-top: 10px;
+      font-size: 30px;
+      text-transform: uppercase;
+      font-weight: 400;
+      @include mobile {
+        font-size: 25px;
+      }
+    }
+    img {
+      &.weather-icon-top {
+        width: 120px;
+        height: 85px;
+        @include mobile {
+          width: 140px;
+          height: 80px;
+        }
+      }
+    }
+    .icon-des {
+      font-size: 20px;
+      font-weight: 300;
+      @include mobile {
+        font-size: 16px;
+        text-shadow: none;
+      }
+    }
+  }
+  .weather-right {
+    display: table;
+    background-color: $text-dark;
+    align-items: center;
+    justify-content: center;
+    flex: 0.7;
+    @include mobile {
+      flex: 0.6;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 20px;
+    padding-top: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: white;
+    .table-row {
+      display: table-row;
+    }
+    p {
+      display: table-cell;
+      &.cell {
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 400;
+        @include mobile {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

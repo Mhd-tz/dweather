@@ -4,9 +4,13 @@
   "private": true,
   "homepage": "https://Mhd-tz.github.io/dweather",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
+    "font-awesome": "^4.7.0",
     "gh-pages": "^3.2.3",
     "node-sass": "^7.0.0",
     "react": "^17.0.2",

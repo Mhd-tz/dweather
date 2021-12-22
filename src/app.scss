@@ -1,0 +1,118 @@
+@import "global/global.scss";
+
+.App {
+  .top-weather {
+    //put it in the center
+    display: flex;
+    margin: auto;
+    width: 65%;
+    @include mobile {
+      width: 100%;
+    }
+    //make height half of the screen
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    //center the text
+    padding: 20px;
+    margin-top: -10px;
+    &:nth-child(odd) {
+      display: none;
+    }
+    &:nth-child(6) {
+      display: none;
+    }
+    &:nth-child(8) {
+      display: none;
+    }
+    h1 {
+      font-size: 2rem;
+      text-transform: uppercase;
+      color: black;
+      background-color: #e2e8f0;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      width: calc(100% - 30px);
+      @include mobile {
+        width: calc(100% - 25px);
+      }
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .weather {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    //center the weather
+    left: 50%;
+    transform: translateX(-50%);
+    // width: 50%;
+    height: 35%;
+    background-color: var(--search-background-color);
+    @include mobile {
+      // make the weather items show in vertical
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      // margin-top: 50px;
+    }
+    .bottom-weather {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #273047;
+      //make a border
+      border: 2px solid rgb(173, 173, 173);
+      //shadow
+      box-shadow: 0px 0px 10px #273047;
+      border-radius: 10px;
+      height: 100%;
+      width: 150px;
+      margin-left: 30px;
+      margin-right: 30px;
+      color: white;
+      text-align: center;
+      @include mobile {
+        width: 90%;
+        height: 25%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 5px;
+      }
+      &:first-child {
+        margin-right: 0;
+        display: none;
+      }
+      // cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+        // width: 450px;
+      }
+      .container {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        @include mobile {
+          width: 100%;
+          height: 100%;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          padding: 30px;
+        }
+      }
+    }
+  }
+}

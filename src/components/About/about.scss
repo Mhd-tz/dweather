@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+@import "../../global/global.scss";
+
+$font-family: "Roboto", sans-serif;
+$font-size-base: 1rem;
+
+.about {
+  //make the size half the size of the screen
+  width: 50%;
+  height: 60%;
+  top: 20%;
+  font-family: $font-family;
+  @include mobile {
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+  // make it center the screen
+  //make it center
+  position: fixed;
+  background-color: var(--about-background-color);
+  opacity: 1;
+  // position: fixed;
+  // top: 0;
+  display: none;
+  right: -1000px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.8s ease-in-out;
+  box-shadow: var(--about-box-shadow);
+
+  &.active {
+    display: flex;
+    //center the menu
+    right: 25%;
+    @include mobile {
+      right: 0px;
+    }
+    // transform: translate(-50%, -50%);
+  }
+
+  .about-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    p {
+      font-size: 1rem;
+      font-weight: normal;
+      color: var(--about-text-color);
+      margin-bottom: 0.2rem;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--about-header-color);
+      //move the text up
+      margin-top: -1rem;
+      padding: 20px;
+      @include mobile {
+        padding: 20px;
+      }
+    }
+    h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--about-header-color);
+      margin-top: 5rem;
+      padding: 20px;
+    }
+  }
+  .about-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    color: red;
+    &:hover {
+      opacity: 0.5;
+    }
+    @include mobile {
+      width: 50px;
+      height: 50px;
+      top: 80%;
+      right: 45%;
+    }
+  }
+  .about-developer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    color: var(--about-text-color);
+    a {
+      &.about-developer-link {
+        transition: all 0.3s ease-in-out;
+        padding-left: 5px;
+        &:hover {
+          opacity: 0.5;
+          color: var(--about-header-color);
+        }
+      }
+    }
+  }
+}

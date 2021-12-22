@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+@import "../../global/global.scss";
+
+$font-family: "Roboto", sans-serif;
+$font-size-base: 1.05rem;
+$github-color: #6e5494;
+$navbar-padding-y: 1rem;
+$navbar-padding-x: 1.15rem;
+
+$navbar-link-padding-y: 0.5rem;
+$navbar-link-padding-x: 1rem;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: $font-family;
+  font-size: $font-size-base;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 1170px;
+  position: relative;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  padding: {
+    left: 15px;
+    right: 15px;
+  }
+}
+
+// Start navbar
+
+.navbar,
+.navbar > .container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar {
+  box-shadow: var(--navbar-shadow);
+  background-color: var(--navbar-background-color);
+  padding: $navbar-padding-y $navbar-padding-x;
+  border-bottom: 1px solid var(--navbar-border-color);
+  .container {
+    @media (min-width: 576px) {
+      max-width: 540px;
+    }
+    @include mobile {
+      max-width: 720px;
+    }
+    @media (min-width: 992px) {
+      max-width: 960px;
+    }
+    @media (min-width: 1200px) {
+      max-width: 1140px;
+    }
+  }
+
+  /*
+  |-----------------------------------
+  | Start navbar logo or brand etc..
+  |-----------------------------------
+  */
+  .navbar-header {
+    display: flex;
+    align-items: center;
+    @media (max-width: 768px) {
+      display: flex;
+      align-items: center;
+    }
+
+    > strong {
+      font-weight: 500;
+      color: var(--navbar-text-color);
+      h4 {
+        span {
+          color: var(--navbar-base-color);
+        }
+      }
+    }
+  }
+
+  /*
+  |-----------------------------------
+  | Start navbar menu
+  |-----------------------------------
+  */
+  .navbar-menu {
+    display: flex;
+    align-items: center;
+    flex-basis: auto;
+    flex-grow: 1;
+
+    @include mobile {
+      display: flex;
+    }
+
+    // Ul
+    .navbar-nav {
+      margin-left: auto;
+      flex-direction: row;
+      display: flex;
+      padding-left: 0;
+      margin-bottom: 0;
+      list-style: none;
+
+      @include mobile {
+        display: flex;
+      }
+
+      > li {
+        > a,
+        text,
+        button {
+          color: var(--navbar-text-color);
+          text-decoration: none;
+          display: inline-block;
+          padding: $navbar-link-padding-y $navbar-link-padding-x;
+          font-size: $font-size-base;
+          border: none;
+          background-color: transparent;
+          font-weight: normal;
+          cursor: pointer;
+          &:hover {
+            color: var(--navbar-hover-color);
+          }
+        }
+        &.active {
+          a,
+          text,
+          button {
+            color: var(--navbar-base-color);
+          }
+        }
+      }
+    }
+  }
+  .github-icon {
+    margin-left: 20px;
+    color: var(--navbar-text-color);
+    :hover {
+      color: $github-color;
+    }
+  }
+}
+
+// Custom
+.navbar .navbar-header > strong span {
+  color: var(--navbar-base-color);
+}
+.navbar .navbar-header h4 {
+  font-weight: 500;
+  font-size: 1.3rem;
+  @include mobile {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,67 @@
+@import "../../global/global.scss";
+$font-family: "Roboto", sans-serif;
+
+.day {
+  //make a border around the day
+  border-bottom: 2px solid #ff0000;
+  padding: 5px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: $font-family;
+  @include mobile {
+    font-size: 15px;
+    border-bottom: none;
+    border-right: 2px solid #ff0000;
+    // margin-right: 60px;
+    margin: 0;
+    padding: 5px;
+    padding-right: 10px;
+  }
+}
+
+img {
+  // margin-top: 30px;
+  &.weather-icon-bottom {
+    margin-top: 10px;
+    width: 90px;
+    @include mobile {
+      margin-top: 0;
+      width: 80px;
+    }
+  }
+}
+
+.iP {
+  margin-top: 10px;
+  font-weight: 300;
+  font-family: $font-family;
+  @include mobile {
+    margin-top: 0;
+  }
+}
+
+.temp {
+  font-family: $font-family;
+  font-size: 16px;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include mobile {
+    padding: 0px;
+    // margin-top: 20px;
+  }
+  .minimum {
+    margin-top: 10px;
+    @include mobile {
+      margin-top: 0px;
+    }
+    text-align: center;
+  }
+  .maximum {
+    margin-top: 10px;
+    text-align: center;
+  }
+}
