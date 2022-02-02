@@ -1,6 +1,6 @@
-/* WebSite */
+/* DWeather WebSite */
 
-This is the website https://mhd-tz.github.io/dweather/
+https://mhd-tz.github.io/dweather/
 
 # Getting Started with Create React App
 
